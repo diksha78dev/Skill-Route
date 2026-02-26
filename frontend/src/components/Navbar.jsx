@@ -9,7 +9,7 @@ export default function Navbar() {
 
       {/* ONE flex row only */}
       <div className="flex items-center gap-6">
-        {["/", "/learning-paths", "/projects", "/contributors"].map(
+        {["/", "/learning-paths", "/projects", "/contributors", "/contact"].map(
           (path, i) => (
             <NavLink
               key={i}
