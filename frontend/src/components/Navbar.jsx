@@ -13,7 +13,8 @@ export default function Navbar() {
     { path: "/", label: "Home" },
     { path: "/learning-paths", label: "Learning Paths" },
     { path: "/projects", label: "Projects" },
-    { path: "/contributors", label: "Contributors" }
+    { path: "/contributors", label: "Contributors" },
+    { path: "/contact", label: "Contact us" }
   ]
 
   return (
