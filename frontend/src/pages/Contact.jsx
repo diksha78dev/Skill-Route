@@ -12,15 +12,14 @@ export default function Contact() {
       form.current,
       import.meta.env.VITE_EMAIL_PUBLIC_KEY
     )
-      .then((result) => {
-        console.log(result.text)
+      .then(() => {
         alert("Message sent successfully!")
         form.current.reset()
-      }, (error) => {
-        console.log(error.text)
+      })
+      .catch((err) => {
+        console.error("Email sending error:", err)
         alert("Failed to send message. Please try again.")
-      }
-    )
+      })
   }
   return (
     <div className="min-h-screen bg-transparent text-gray-900 dark:text-white px-4 py-20 transition-colors">
