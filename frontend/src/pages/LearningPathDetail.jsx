@@ -11,7 +11,15 @@ function NonDsaPathDetail({ path }) {
       <h2 className="mb-3 text-xl md:text-2xl font-semibold">Topics</h2>
       <ul className="list-inside list-disc text-gray-700 dark:text-gray-300">
         {path.topics.map((topic, index) => (
-          <li key={`${path.slug}-${index}`}>{topic}</li>
+          <li key={`${path.slug}-${index}`}>
+            {path.slug === "web-development" && topic === "CSS Fundamentals" ? (
+              <Link to="/css" className="text-cyan-600 dark:text-cyan-400 hover:underline transition-colors">
+                {topic}
+              </Link>
+            ) : (
+              topic
+            )}
+          </li>
         ))}
       </ul>
     </div>
